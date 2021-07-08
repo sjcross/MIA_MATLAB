@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>NA</groupId>
+    <artifactId>javabuilder</artifactId>
+    <version>1.0.0</version>
+</project>
+
+<!--FOR FULL MATLAB INSTALLATIONS-->
+<!--Start terminal in Compiled folder, then run "mvn install:install-file -Dfile="C:\Program Files\MATLAB\R2018b\toolbox\javabuilder\jar\javabuilder.jar" -DpomFile="pom_Javabuilder.xml""-->
+
+<!--FOR MCR INSTALLATIONS-->
+<!--Start terminal in Compiled folder, then run "mvn install:install-file -Dfile="C:\Program Files\MATLAB\MATLAB Runtime\v95\toolbox\javabuilder\jar\javabuilder.jar" -DpomFile="pom_Javabuilder.xml""-->

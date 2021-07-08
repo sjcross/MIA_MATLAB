@@ -7,8 +7,9 @@ import MIA_MATLAB_Core.StackSorter;
 import ij.ImagePlus;
 import ij.ImageStack;
 import wbif.sjx.MIA.MIA;
+import wbif.sjx.MIA.Module.Categories;
+import wbif.sjx.MIA.Module.Category;
 import wbif.sjx.MIA.Module.ModuleCollection;
-import wbif.sjx.MIA.Module.PackageNames;
 import wbif.sjx.MIA.Module.ImageProcessing.Stack.ExtractSubstack;
 import wbif.sjx.MIA.Object.Image;
 import wbif.sjx.MIA.Object.Status;
@@ -72,8 +73,8 @@ public class SortStack extends CoreMATLABModule {
     }
 
     @Override
-    public String getPackageName() {
-        return PackageNames.IMAGE_PROCESSING_STACK;
+    public Category getCategory() {
+        return Categories.IMAGE_PROCESSING_STACK;
     }
 
     @Override
@@ -195,7 +196,7 @@ public class SortStack extends CoreMATLABModule {
 
     MWNumericArray getReferenceArrayLinked(Image referenceImage, int calculationChannel) {
         Image referenceChannel = ExtractSubstack.extractSubstack(referenceImage, "Reference",
-                String.valueOf(calculationChannel+1), "1-end", "1-end");
+                String.valueOf(calculationChannel + 1), "1-end", "1-end");
 
         return imageStackToMW(referenceChannel.getImagePlus().getImageStack());
 
@@ -207,12 +208,12 @@ public class SortStack extends CoreMATLABModule {
         switch (sortAxis) {
             case SortAxes.TIME:
                 referenceChannel = ExtractSubstack.extractSubstack(referenceImage, "Reference",
-                        String.valueOf(calculationChannel+1), String.valueOf(otherAxisIdx+1), "1-end");
+                        String.valueOf(calculationChannel + 1), String.valueOf(otherAxisIdx + 1), "1-end");
                 break;
 
             case SortAxes.Z:
                 referenceChannel = ExtractSubstack.extractSubstack(referenceImage, "Reference",
-                        String.valueOf(calculationChannel+1), "1-end", String.valueOf(otherAxisIdx+1));
+                        String.valueOf(calculationChannel + 1), "1-end", String.valueOf(otherAxisIdx + 1));
                 break;
         }
 
@@ -313,7 +314,7 @@ public class SortStack extends CoreMATLABModule {
         String calculationSource = parameters.getValue(CALCULATION_SOURCE);
         String externalSourceName = parameters.getValue(EXTERNAL_SOURCE);
         int calculationChannel = parameters.getValue(CALCULATION_CHANNEL);
-        
+
         // Calculation channel is specified on the GUI with numbering starting at 1
         calculationChannel--;
 

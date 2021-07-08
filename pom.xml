@@ -13,7 +13,7 @@
 
     <groupId>wbif.sjx</groupId>
     <artifactId>MIA_MATLAB</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.3</version>
     <packaging>jar</packaging>
     <name>MIA_MATLAB</name>
     <url>https://github.com/SJCross/MIA_MATLAB</url>
@@ -154,7 +154,7 @@
             <scope>${scp}</scope> -->
             <groupId>com.github.SJCross</groupId>
             <artifactId>ModularImageAnalysis</artifactId>
-            <version>0.15.7</version>
+            <version>v0.18.0</version>
             <scope>${scp}</scope>
         </dependency>
 
